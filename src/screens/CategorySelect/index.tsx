@@ -27,8 +27,14 @@ interface Props {
   setCategory: (category: Category) => void; // função que vai ser utilizada para atualizar o Estado. E colocamos void pois não irá retornar nada!
   closeSelectCategory: () => void; // Também vai ser uma função que não irá retornar nada mas vai servir para fechar o nosso modal
 }
+
 //A <Flatlist> vai se referir as categorias do arquivo categories.ts 
 export function CategorySelect({category, setCategory, closeSelectCategory}:Props){
+
+  function handleCategorySelect(category: Category){
+    setCategory(category);
+  }
+
   return (
     <Container>
       <Header>
@@ -41,7 +47,10 @@ export function CategorySelect({category, setCategory, closeSelectCategory}:Prop
         style={{flex: 1, width:'100%'}}
         keyExtractor={(item)=>item.key}
         renderItem={({item}) => (
-          <Category>
+          <Category
+            onPress = { () => handleCategorySelect(item)}
+            isActive = {category.key === item.key}
+          >
             <Icon name={item.icon}/>
             <Name>{item.name}</Name>
           </Category>

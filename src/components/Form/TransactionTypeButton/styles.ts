@@ -1,7 +1,8 @@
 import styled, {css} from 'styled-components/native' // importei o css para poder mudar a cor do botão 'income' ou
-import { TouchableOpacity } from 'react-native';
+
 import {Feather} from '@expo/vector-icons'
 import { RFValue } from 'react-native-responsive-fontsize';
+import {RectButton} from 'react-native-gesture-handler'
 
 
 interface IconProps {
@@ -14,7 +15,7 @@ interface ContainerProps{
   type:'up' | 'down';
 }
 
-export const Container = styled(TouchableOpacity)<ContainerProps>`
+export const Container = styled(RectButton)<ContainerProps>`
   width:48%;
   
   flex-direction: row;

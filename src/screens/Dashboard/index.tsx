@@ -17,6 +17,7 @@ import {
   Transactions,
   Title,
   TransactionList,
+  LogoutButton
 } from './styles';
 
 //Nesse caso estou adicinando o 'id' as propriedades do TransactionCardProps já que o id será usado aqui!
@@ -83,7 +84,9 @@ export function Dashboard(){
 
           </UserInfo>
 
-          <Icon name='power'/>
+          <LogoutButton onPress = {() => {}} > 
+            <Icon name='power'/>
+          </LogoutButton>
 
         </UserWrapper>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import {TouchableOpacityProps} from 'react-native'; // importado para não dar erro  de tipagem no styled do TransactionTypeButton 
+import { RectButtonProps } from 'react-native-gesture-handler';
 
 import {
   Container,
@@ -13,7 +14,7 @@ const icons = {
   down:'arrow-down-circle'
 }
 
-interface Props extends TouchableOpacityProps{
+interface Props extends RectButtonProps{
   title: string;
   type: 'up' | 'down';
   isActive: boolean; // criado para saber se o botão está ativo. Ou seja, caso o botão esteja ativo vou aplicar uma cor, caso não esteja ativo será aplicada uma outra cor

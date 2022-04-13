@@ -19,7 +19,6 @@ export const Header = styled.View`
   justify-content: flex-end; 
   
   padding-bottom: ${RFValue(19)}px;
-
 `;
 
 export const Title = styled.Text`

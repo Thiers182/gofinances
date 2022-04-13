@@ -3,7 +3,7 @@ import { FlatList, FlatListProps } from 'react-native'; // será importado pois 
 import {RFPercentage, RFValue} from 'react-native-responsive-fontsize'; // biblioteca responsável pelas proporções dos objetos, ou seja se eu abrir em um outro dispositivo os tamanhos vão ser adaptados
 import {Feather} from '@expo/vector-icons';
 import {getBottomSpace, getStatusBarHeight} from 'react-native-iphone-x-helper'; // vai lidar com o tamanho da barra de status
-
+import { BorderlessButton} from 'react-native-gesture-handler'
 import {DataListProps} from '.'; // o ponto apenas significa que vou importar dessa pasta
 
 // quando eu coloco o export na frente quer dizer que ele pode ser exportado 
@@ -61,6 +61,9 @@ color: ${({theme}) => theme.colors.shape};
 font-size: ${RFValue(16)}px; /*Eu mudei de 18 para 16 */
 font-family: ${({theme}) => theme.fonts.bold};
 `;
+
+export const LogoutButton = styled(BorderlessButton)``;
+
 
 export const Icon = styled(Feather)` /* como o Feather não é nativo do react native posso envolver por parênteses pra usar os componentes da biblioteca que preciso estilizar! */
   color: ${({theme}) => theme.colors.secondary};
